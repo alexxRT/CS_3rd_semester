@@ -1,0 +1,26 @@
+//know everything by the next friday
+//getuid  ()
+//getgid ()
+//getpid ()
+//getppid ()
+//fork ()
+//exec ()
+//open
+//close 
+//umask
+//read
+//write
+//pipe
+//mknod
+//ftok
+//shmget
+//shmat
+//shmdt
+//shmctl
+//pthread_self
+//pthread_create
+//pthread_join
+//pthread_exit
+//semget 
+//semop
+//semctl
