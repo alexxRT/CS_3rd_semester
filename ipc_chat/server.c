@@ -325,7 +325,7 @@ int main ()
     users_base_t data_base = {};
     data_base.user = users; //replace user with users
 
-    size_t seed = ftok ("./proga1.c", 0); //connect to the message queue
+    size_t seed = ftok ("./server.c", 0); //connect to the message queue
     umask (0);
     int server_qid= msgget (seed, IPC_CREAT | 0777);
 

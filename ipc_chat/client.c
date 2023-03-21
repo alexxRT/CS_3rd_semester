@@ -12,11 +12,11 @@
 #include <assert.h>
 #include <time.h>
 
-const int NAME_SIZE = 11;
-const int MAX_SIZE  = 100;
+const int NAME_SIZE = 16;
+const int MAX_SIZE  = 128;
 
-const int MSG_SIZE_LONG  = 130;
-const int MSG_SIZE_SHORT = 15;
+const int MSG_SIZE_LONG  = 128;
+const int MSG_SIZE_SHORT = 16;
 
 const int EXIT = -1;
 
@@ -248,6 +248,7 @@ int ParseMessage (my_message_t* message, char buffer[])
     {
         message->type = SERVER_COMMAND;
         strcpy (message->message, "ONLINE");
+
         return SERVER_COMMAND;
     }
 
@@ -299,7 +300,7 @@ void* SendMessages (void* args)
 
 int main ()
 {
-    size_t key_1 = ftok ("./proga1.c", 0); //connect to the server queue
+    size_t key_1 = ftok ("./server.c", 0); //connect to the server queue
 
     srand (time (NULL));
     int random_seed = rand();
